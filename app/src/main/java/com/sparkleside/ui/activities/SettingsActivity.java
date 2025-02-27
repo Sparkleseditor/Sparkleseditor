@@ -2,7 +2,6 @@ package com.sparkleside.ui.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
-import com.google.android.material.transition.platform.MaterialSharedAxis;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 import com.sparkleside.R;
 import com.sparkleside.databinding.ActivitySettingsBinding;
@@ -15,24 +14,8 @@ public class SettingsActivity extends BaseActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     binding = ActivitySettingsBinding.inflate(getLayoutInflater());
-    getWindow().setAllowEnterTransitionOverlap(false);
-    MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
-    enterTransition.addTarget(R.id.coordinator);
-    enterTransition.setDuration(400L);
-    getWindow().setEnterTransition(enterTransition);
-    MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
-    returnTransition.setDuration(400L);
-    returnTransition.addTarget(R.id.coordinator);
-    getWindow().setReturnTransition(returnTransition);
-
-   /* MaterialSharedAxis exitTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
-    exitTransition.addTarget(R.id.coordinator);
-    getWindow().setExitTransition(exitTransition);
-    MaterialSharedAxis reenterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
-    reenterTransition.addTarget(R.id.coordinator);
-    getWindow().setReenterTransition(reenterTransition);*/
+    configureTransitions(R.id.coordinator);
     super.onCreate(savedInstanceState);
-
     setContentView(binding.getRoot());
 
     setSupportActionBar(binding.toolbar);
@@ -60,13 +43,19 @@ public class SettingsActivity extends BaseActivity {
         v -> {
           Intent intent = new Intent(SettingsActivity.this, CodeEditorSettingsActivity.class);
           android.app.ActivityOptions optionsCompat =
-          android.app.ActivityOptions.makeSceneTransitionAnimation(SettingsActivity.this);
+              android.app.ActivityOptions.makeSceneTransitionAnimation(SettingsActivity.this);
           startActivity(intent, optionsCompat.toBundle());
-        });    
+        });
     binding.lib.setOnClickListener(
         v -> {
           LibsBuilder libe = new LibsBuilder();
           libe.start(this);
         });
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+    configureTransitions(R.id.coordinator);
   }
 }
