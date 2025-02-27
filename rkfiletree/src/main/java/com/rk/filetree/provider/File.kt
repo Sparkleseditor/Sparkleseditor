@@ -3,40 +3,39 @@ package com.rk.filetree.provider
 import com.rk.filetree.interfaces.FileObject
 import java.io.File
 
-
-//wrapper for java.io.File
+// wrapper for java.io.File
 class file(val file: File) : FileObject {
 
-    override fun listFiles(): List<FileObject> {
-        val list = file.listFiles()
-        if (list.isNullOrEmpty()){
-            return emptyList()
-        }
-
-        return list.map { f -> file(f) }
+  override fun listFiles(): List<FileObject> {
+    val list = file.listFiles()
+    if (list.isNullOrEmpty()) {
+      return emptyList()
     }
 
-    fun getNativeFile():File{
-        return file
-    }
+    return list.map { f -> file(f) }
+  }
 
-    override fun isDirectory(): Boolean {
-        return file.isDirectory
-    }
+  fun getNativeFile(): File {
+    return file
+  }
 
-    override fun isFile(): Boolean {
-       return file.isFile
-    }
+  override fun isDirectory(): Boolean {
+    return file.isDirectory
+  }
 
-    override fun getName(): String {
-       return file.name
-    }
+  override fun isFile(): Boolean {
+    return file.isFile
+  }
 
-    override fun getParentFile(): FileObject? {
-        return file.parentFile?.let { file(it) }
-    }
+  override fun getName(): String {
+    return file.name
+  }
 
-    override fun getAbsolutePath(): String {
-        return file.absolutePath
-    }
+  override fun getParentFile(): FileObject? {
+    return file.parentFile?.let { file(it) }
+  }
+
+  override fun getAbsolutePath(): String {
+    return file.absolutePath
+  }
 }

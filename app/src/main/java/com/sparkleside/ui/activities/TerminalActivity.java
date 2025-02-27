@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.LinearLayout;
 import androidx.annotation.Nullable;
 import com.blankj.utilcode.util.SizeUtils;
+import com.sparkleside.R;
 import com.sparkleside.databinding.ActivityTerminalBinding;
 import com.sparkleside.ui.base.BaseActivity;
 import com.sparkleside.ui.components.TerminalBackEnd;
@@ -28,8 +29,9 @@ public class TerminalActivity extends BaseActivity {
 
   @Override
   protected void onCreate(@Nullable Bundle saved) {
-    super.onCreate(saved);
     binding = ActivityTerminalBinding.inflate(getLayoutInflater());
+    configureTransitions(R.id.coordinator);
+    super.onCreate(saved);
     backEnd = new TerminalBackEnd(this);
     setupTerminalView();
     setContentView(binding.getRoot());
@@ -38,6 +40,12 @@ public class TerminalActivity extends BaseActivity {
     } catch (Exception e) {
       throw new RuntimeException("Invalid VIRTUAL_KEYS variable", e);
     }
+  }
+
+  @Override
+  public void onResume() {
+    super.onResume();
+    configureTransitions(R.id.coordinator);
   }
 
   // destroy the session to prevent memory leak

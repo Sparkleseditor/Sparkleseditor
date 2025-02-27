@@ -13,12 +13,12 @@
  */
 package com.zyron.filetree.viewholder
 
+// import com.google.android.material.imageview.ShapeableImageView
+// import com.google.android.material.textview.MaterialTextView
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
-//import com.google.android.material.imageview.ShapeableImageView
-//import com.google.android.material.textview.MaterialTextView
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
 import com.zyron.filetree.R
 
 /**

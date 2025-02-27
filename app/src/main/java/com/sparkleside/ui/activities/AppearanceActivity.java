@@ -1,22 +1,20 @@
 package com.sparkleside.ui.activities;
 
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
-import android.content.Intent;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatDelegate;
-import com.google.android.material.transition.platform.MaterialSharedAxis;
+import com.google.android.material.snackbar.Snackbar;
 import com.sparkleside.R;
 import com.sparkleside.databinding.ActivityAppearanceBinding;
 import com.sparkleside.preferences.Preferences;
 import com.sparkleside.ui.base.BaseActivity;
-import com.google.android.material.snackbar.Snackbar;
-import dev.trindadedev.ui_utils.preferences.withicon.PreferenceSwitch;
+import dev.trindadedev.fastui.preferences.withicon.PreferenceSwitch;
 
-/* 
-* Appearance Activity of Sparkles Licensed by GPL-v3.0
-* @author Syntaxspin (SyntaxSpins)
-*/
+/*
+ * Appearance Activity of Sparkles.
+ * @author Syntaxspin (SyntaxSpins)
+ */
 
 public class AppearanceActivity extends BaseActivity {
 
@@ -25,16 +23,9 @@ public class AppearanceActivity extends BaseActivity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     binding = ActivityAppearanceBinding.inflate(getLayoutInflater());
-    getWindow().setAllowEnterTransitionOverlap(false);
-    MaterialSharedAxis enterTransition = new MaterialSharedAxis(MaterialSharedAxis.X, true);
-    enterTransition.addTarget(R.id.coordinator);
-    enterTransition.setDuration(400L);
-    getWindow().setEnterTransition(enterTransition);
-    MaterialSharedAxis returnTransition = new MaterialSharedAxis(MaterialSharedAxis.X, false);
-    returnTransition.setDuration(400L);
-    returnTransition.addTarget(R.id.coordinator);
-    getWindow().setReturnTransition(returnTransition);
+    configureTransitions(R.id.coordinator);
     super.onCreate(savedInstanceState);
+
     setContentView(binding.getRoot());
     int theme = AppCompatDelegate.getDefaultNightMode();
 
@@ -71,7 +62,12 @@ public class AppearanceActivity extends BaseActivity {
 
     binding.linear1.addView(getMonetPreference());
     binding.linear1.addView(getAmoledPreference());
+  }
 
+  @Override
+  public void onResume() {
+    super.onResume();
+    configureTransitions(R.id.coordinator);
   }
 
   private PreferenceSwitch getMonetPreference() {
@@ -80,12 +76,8 @@ public class AppearanceActivity extends BaseActivity {
     pref.setTitle(getString(R.string.monet_title));
     pref.setDescription(getString(R.string.monet_desc));
     pref.setValue(Preferences.Theme.isMonetEnable(this));
-    pref.setBackgroundPosition("0");
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
-        	pref.setViewEnabled(true);
-        } else {
-        	pref.setViewEnabled(false);
-        }
+    pref.setBackgroundType(0);
+    pref.setEnabled(Build.VERSION.SDK_INT >= Build.VERSION_CODES.S);
     pref.setSwitchChangedListener(
         (c, isChecked) -> {
           Preferences.Theme.setMonetEnable(this, isChecked);
@@ -93,29 +85,35 @@ public class AppearanceActivity extends BaseActivity {
         });
     return pref;
   }
+
   private PreferenceSwitch getAmoledPreference() {
     PreferenceSwitch pref = new PreferenceSwitch(this);
     pref.setIcon(R.drawable.ic_pallete);
     pref.setTitle(getString(R.string.amoled_title));
     pref.setDescription(getString(R.string.amoled_desc));
     pref.setValue(Preferences.Theme.isAmoledEnable(this));
-    pref.setBackgroundPosition("3");
+    pref.setBackgroundType(2);
     pref.setSwitchChangedListener(
         (c, isChecked) -> {
           Preferences.Theme.setAmoledEnable(this, isChecked);
           askForRestart();
         });
     return pref;
-  }  
-    
-    
-    
+  }
+
   private void askForRestart() {
-        Snackbar.make(binding.linear1, "To Apply Changes Restart the app", com.google.android.material.snackbar.Snackbar.LENGTH_SHORT).setAction("Restart", v-> {
-            Intent intent = new Intent(this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-            startActivity(intent);
-            System.exit(0);
-        }).show();
-  }  
+    Snackbar.make(
+            binding.linear1,
+            "To Apply Changes Restart the app",
+            com.google.android.material.snackbar.Snackbar.LENGTH_SHORT)
+        .setAction(
+            "Restart",
+            v -> {
+              Intent intent = new Intent(this, MainActivity.class);
+              intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+              startActivity(intent);
+              System.exit(0);
+            })
+        .show();
+  }
 }
