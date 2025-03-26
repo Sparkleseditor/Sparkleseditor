@@ -1,0 +1,23 @@
+name: MobSFScan
+
+on: [push, pull_request]
+
+jobs:
+  security_scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Instalar MobSFScan
+        run: pip install mobsfscan
+
+      - name: Rodar análise de segurança
+        run: mobsfscan ./  
+
+      - name: Salvar Relatório
+        uses: actions/upload-artifact@v3
+        with:
+          name: mobsfscan-results
+          path: mobsfscan-output.json  
