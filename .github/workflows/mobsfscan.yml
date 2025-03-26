@@ -14,10 +14,10 @@ jobs:
         run: pip install mobsfscan
 
       - name: Rodar análise de segurança
-        run: mobsfscan ./  
+        run: mobsfscan ./ --json > mobsfscan-output.json
 
       - name: Salvar Relatório
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: mobsfscan-results
-          path: mobsfscan-output.json  
+          path: mobsfscan-output.json
