@@ -7,17 +7,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout do código
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Rodar MobSFScan
+      - name: MobSFScan
         uses: MobSF/mobsfscan@0.4.5
         with:
-          path: "./"  
-          json: true  
-          exit_code: true  
+          args: "./ --json"  
+
+      - name: Back
+        run: cat mobsfscan-output.json || echo "None Report"
 
       - name: Report
+        if: success()
         uses: actions/upload-artifact@v4
         with:
           name: mobsfscan-results
