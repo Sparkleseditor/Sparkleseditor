@@ -1,35 +1,20 @@
-name: MobSFScan
+name: mobsfscan
 
 on:
   push:
-    branches:
-      - main
+    branches: [ master, main ]
   pull_request:
-    branches:
-      - main
+    branches: [ master, main ]
 
 jobs:
-  scan:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
-
-    - name: Set up MobSF
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y docker.io
-        sudo systemctl start docker
-        sudo systemctl enable docker
-        sudo docker pull opensecurity/mobile-security-framework-mobsf:latest
-        sudo docker run -d -p 8000:8000 opensecurity/mobile-security-framework-mobsf:latest
-
-    - name: Wait for MobSF to start
-      run: sleep 60
-
-    - name: Run MobSFScan
-      uses: ajinabraham/mobsfscan-action@v1
+    - uses: actions/checkout@v4.2.2
+    - uses: actions/setup-python@v5.3.0
       with:
-        mobsf_host: 'http://localhost:8000'
-        app_path: './app/build/outputs/apk/release/app-release.apk'
+        python-version: '3.12'
+    - name: mobsfscan
+      uses: MobSF/mobsfscan@main
+      with:
+        args: '. --json'
