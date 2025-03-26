@@ -1,9 +1,9 @@
 name: mobsfscan sarif
 on:
   push:
-    branches: [ master, main ]
+    branches: [ master, main, DevOps ]
   pull_request:
-    branches: [ master, main ]
+    branches: [ master, main, DevOps ]
 
 jobs:
   mobsfscan:
