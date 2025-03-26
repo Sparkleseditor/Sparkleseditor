@@ -1,70 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+  <!--Base String-->
+  
   <string name="app_name">Sparkles IDE</string>
   <string name="com_word_settings">Configurações</string>
   <string name="set_main">Configurações do Aplicativo</string>
-  <string name="set_main_desc">Algumas das configurações de aparência do Sparkles</string>
+  <string name="set_main_desc">Algumas configurações de Aparência do Sparkles</string>
   <string name="common_word_allow">Permitir</string>
   <string name="common_word_deny">Negar</string>
   <string name="set_editor">Editor de Código</string>
   <string name="set_editor_desc">Modificar o Estilo do Editor</string>
   <string name="set_terminal">Terminal</string>
-  <string name="set_terminal_desc">Estilizar o Terminal</string>
+  <string name="set_terminal_desc">Estilizando o Terminal</string>
   <string name="set_lib">Software de Terceiros</string>
   <string name="set_lib_desc">Bibliotecas e Softwares usados no Sparkles</string>
   <string name="com_word_about">Sobre</string>
-  <string name="set_about_desc">Sobre o Sparkles IDE</string>
+  <string name="set_about_desc">Sobre o Sparkles</string>
   <string name="about_team">Equipe</string>
   <string name="about_tag_translator">Tradutor</string>
   <string name="about_tag_developer">Desenvolvedor</string>
+  <string name="about_tag_promote">Promotor</string>
+  <string name="about_tag_designer">Designer</string>
   <string name="tooltip_settings">Configurações</string>
   <string name="tooltip_terminal">Abrir terminal</string>
   <string name="tooltip_new_file">Novo Arquivo</string>
   <string name="tooltip_search">Pesquisar no código</string>
-  <string name="monet_title">Usar cores dinâmicas</string>
-  <string name="monet_desc">Usar a paleta de cores do seu dispositivo em vez de branco e preto</string>
-  <string name="need_restart">Precisa reiniciar</string>
-  <string name="about_tag_promote">Promotor</string>
-  <string name="about_tag_designer">Designer</string>
-  <string name="amoled_title">Tema noturno</string>
-  <string name="amoled_desc">Tema amoled preto</string>
+  <string name="permission_dialog_text">Conceda permissão de acesso a todos os arquivos para que o Sparkles IDE funcione corretamente</string>
+  <string name="Grant">Conceder</string>
+  <string name="Deny">Negar</string>
+  
+ <!--Appearance Settings-->
+  
+  <string name="monet_title">Usar Cores Dinâmicas</string>
+  <string name="monet_desc">Use a paleta de cores do seu dispositivo em vez de preto e branco</string>
+  <string name="amoled_title">Tema Noturno</string>
+  <string name="amoled_desc">Tema preto para AMOLED</string>
+  <string name="need_restart">Necessita de Reinício</string>
+
+  <!--TEAM BIO-->
+
+  <string name="syntaxspin_phrase">Um amante de Material You, desenvolvedor Android/Web</string>
+  <string name="yamenher_phrase">Um criador de utilitários legal</string>
+  <string name="trindadedev_phrase">Eu uso Jetpack Compose, a propósito</string>
+  <string name="hanzo_phrase">Fantasma</string>
+  <string name="thiarley_rocha_phrase">Vamos jogar Minecraft?</string>
+  <string name="rohit_kushvaha_phrase">Não sei</string>
+  <string name="neoapps_phrase">Eu uso Arch, a propósito</string>
+  <string name="jaiel_lima_phrase">Feliz é o homem que encontra sabedoria, e o homem que adquire entendimento. \n\n Provérbios 3:13</string>
+  <string name="alex_phrase">Contrabandista PaxSenix</string>
+  <string name="vivek_phrase">Algumas pessoas te machucam e agem como se você as machucasse</string>
   <string name="art_phrase">Transformando códigos em histórias que mudam vidas✨️</string>
   <string name="nex_phrase">Um cara à moda antiga entre os modernos</string>
-  <string name="omer_phrase">Proprietário do POPMods</string>
+  <string name="omer_phrase">Proprietário do POPMods</string> 
   <string name="optim_phrase">Proprietário do AndroBusket</string>
   <string name="zg_phrase">Um Designer de Material</string>
   <string name="common_word_result">Resultado</string>
   <string name="common_word_ok">Ok</string>
   <string name="common_word_copy">Copiar</string>
+  
+  <!--new settings Strings-->
+  
   <string name="apper_uimode">Definir Modo de UI:</string>
+  
+  <!--Code editor settings , avoid using long sentences-->
+  
   <string name="editor_theme">Tema do Editor</string>
-  <string name="editor_theme_desc">Escolher o Tema do Editor Sora</string>
+  <string name="editor_theme_desc">Escolha o Tema do Editor Sora</string>
   <string name="editor_wordwrap">Quebra de Linha</string>
   <string name="editor_wordwrap_desc">Ativar Quebra de Linha do Sora</string>
   <string name="editor_fl">Mostrar Número da Primeira Linha</string>
   <string name="editor_fl_desc">Mostrar ou ocultar o número da primeira linha</string>
-  <string name="editor_overscroll">Deslize Excedente</string>
-  <string name="editor_overscroll_desc">Ativar Deslize Excedente do Sora</string>
-  <string name="editor_ln">Mostrar Números de Linha</string>
-  <string name="editor_ln_desc">Mostrar ou ocultar os números de linha</string>
+  <string name="editor_overscroll">Rolagem Excessiva</string>
+  <string name="editor_overscroll_desc">Ativar Rolagem Excessiva do Sora</string>
+  <string name="editor_ln">Mostrar Números das Linhas</string>
+  <string name="editor_ln_desc">Mostrar ou ocultar os números das linhas</string>
   <string name="editor_toolbar">Mostrar Barra de Ferramentas</string>
   <string name="editor_toolbar_desc">Mostrar ou ocultar a Barra de Ferramentas</string>
-  <string name="editor_tab">Guias (Atualmente indisponível)</string>
-  <string name="editor_tab_desc">Usar modo de guias no Sparkles</string>
+  <string name="editor_tab">Abas (Não disponível atualmente)</string>
+  <string name="editor_tab_desc">Usar modo de abas no Sparkles</string>
   <string name="editor_title">Formatação</string>
   <string name="editor_theme_title">Tema do Editor Sora</string>
-  <string name="permission_dialog_text">Conceder a todos os arquivos permissão de acesso para fazer o Sparkles IDE funcionar corretamente</string>
-  <string name="Grant">Conceder</string>
-  <string name="Deny">Negar</string>
-
-  <!-- TEAM BIO -->
-  <string name="syntaxspin_phrase">Um Amante de Material You e Desenvolvedor Android/Web</string>
-  <string name="yamenher_phrase">Um criador de coisas legais e úteis</string>
-  <string name="trindadedev_phrase">Eu uso o Jetpack Compose, a propósito</string>
-  <string name="hanzo_phrase">Ghost</string>
-  <string name="thiarley_rocha_phrase">Vamos jogar Minecraft?</string>
-  <string name="rohit_kushvaha_phrase">Sei lá</string>
-  <string name="neoapps_phrase">Eu uso Arch, a propósito</string>
-  <string name="jaiel_lima_phrase">Feliz é o homem que encontra sabedoria e o homem que adquire entendimento. \n\n Provérbios 3:13</string>
-  <string name="alex_phrase">PaxSenix bootlegger</string>
+  <string name="restart_app_message">Para aplicar as alterações, reinicie o aplicativo</string>
+  
 </resources>

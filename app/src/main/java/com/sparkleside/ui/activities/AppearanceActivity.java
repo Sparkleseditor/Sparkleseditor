@@ -101,19 +101,19 @@ public class AppearanceActivity extends BaseActivity {
     return pref;
   }
 
-  private void askForRestart() {
+private void askForRestart() {
     Snackbar.make(
             binding.linear1,
-            "To Apply Changes Restart the app",
+            getString(R.string.restart_app_message),
             com.google.android.material.snackbar.Snackbar.LENGTH_SHORT)
         .setAction(
             "Restart",
             v -> {
-              Intent intent = new Intent(this, MainActivity.class);
-              intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-              startActivity(intent);
-              System.exit(0);
+                Intent intent = new Intent(this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                System.exit(0);
             })
         .show();
-  }
+}
 }

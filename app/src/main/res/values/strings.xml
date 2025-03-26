@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
+  <!--Base String-->
+  
   <string name="app_name">Sparkles IDE</string>
   <string name="com_word_settings">Settings</string>
   <string name="set_main">Application Settings</string>
@@ -28,6 +31,7 @@
   <string name="Deny">Deny</string>
   
  <!--Appearance Settings-->
+  
   <string name="monet_title">Use Dynamic Colors</string>
   <string name="monet_desc">Use your device color palette instead black and white</string>
   <string name="amoled_title">Night theme</string>
@@ -51,16 +55,16 @@
   <string name="omer_phrase">POPMods Owner</string> 
   <string name="optim_phrase">AndroBusket Owner</string>
   <string name="zg_phrase">A Material Designer</string>
-
-
-
   <string name="common_word_result">Result</string>
   <string name="common_word_ok">Ok</string>
   <string name="common_word_copy">Copy</string>
   
   <!--new settings Strings-->
+  
   <string name="apper_uimode">Set Ui Mode:</string>
+  
   <!--Code editor settings , avoid using long sentences-->
+  
   <string name="editor_theme">Editor Theme</string>
   <string name="editor_theme_desc">Choose Sora Editor Theme</string>
   <string name="editor_wordwrap">WordWrap</string>
@@ -77,5 +81,6 @@
   <string name="editor_tab_desc">Use tabs mode on Sparkles</string>
   <string name="editor_title">Formatting</string>
   <string name="editor_theme_title">Sora Editor Theme</string>
+  <string name="restart_app_message">To Apply Changes Restart the app</string>
   
 </resources>
