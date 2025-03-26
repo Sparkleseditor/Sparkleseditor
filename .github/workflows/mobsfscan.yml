@@ -10,13 +10,14 @@ jobs:
       - name: Checkout do código
         uses: actions/checkout@v4
 
-      - name: Instalar MobSFScan
-        run: pip install mobsfscan
+      - name: Rodar MobSFScan
+        uses: MobSF/mobsfscan@0.4.5
+        with:
+          path: "./"  
+          json: true  
+          exit_code: true  
 
-      - name: Rodar análise de segurança
-        run: mobsfscan ./ --json > mobsfscan-output.json
-
-      - name: Salvar Relatório
+      - name: Report
         uses: actions/upload-artifact@v4
         with:
           name: mobsfscan-results
