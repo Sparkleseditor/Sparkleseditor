@@ -68,7 +68,7 @@ dependencies {
   implementation("androidx.constraintlayout:constraintlayout:2.1.4")
   implementation("androidx.appcompat:appcompat:1.6.1")
 
-  implementation("com.google.android.material:material:1.13.0-alpha13")
+  implementation("com.google.android.material:material:1.13.0-alpha12")
 
   implementation(platform("io.github.Rosemoe.sora-editor:bom:0.23.4"))
   implementation("io.github.Rosemoe.sora-editor:editor:0.23.4")
