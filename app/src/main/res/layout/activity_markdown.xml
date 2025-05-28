@@ -18,7 +18,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             app:title="Nozomi Markdown"
-            app:subtitle="Powerd By Markwon Library"/>
+            app:subtitle="Powered By Markwon Library"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 

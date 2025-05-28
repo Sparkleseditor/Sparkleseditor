@@ -82,5 +82,10 @@
   <string name="editor_title">Formatting</string>
   <string name="editor_theme_title">Sora Editor Theme</string>
   <string name="restart_app_message">To Apply Changes Restart the app</string>
-  
+    <string name="save">Save</string>
+  <string name="save_as">Save As</string>
+  <string name="close">Close</string>
+  <string name="close_others">Close Others</string>
+  <string name="close_all">Close All</string>
+
 </resources>
