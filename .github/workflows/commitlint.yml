@@ -1,3 +1,5 @@
+# .github/workflows/commitlint.yml
+
 name: Commitlint
 
 on:
@@ -14,11 +16,19 @@ jobs:
   commitlint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - uses: wagoid/commitlint-github-action@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - uses: wagoid/commitlint-github-action@v5
         with:
           configFile: 'commitlint.config.cjs'
           firstParent: false
