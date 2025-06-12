@@ -4,7 +4,8 @@
   xmlns:tools="http://schemas.android.com/tools">
 
   <uses-permission android:name="android.permission.INTERNET" />
-  <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"
+      tools:ignore="ProtectedPermissions" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission
@@ -54,5 +55,8 @@
     <activity
       android:name="com.sparkleside.ui.activities.HtmlViewerActivity"
       android:exported="true" />
+    <activity
+        android:name="com.sparkleside.ui.activities.CommitsActivity"
+        android:exported="true" />
   </application>
 </manifest>
