@@ -36,3 +36,4 @@ jobs:
           else
             npx commitlint --from ${{ github.event.before }} --to ${{ github.event.after }} --verbose
           fi
+          
