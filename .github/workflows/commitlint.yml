@@ -1,5 +1,3 @@
-# .github/workflows/commitlint.yml
-
 name: Commitlint
 
 on:
@@ -20,8 +18,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '18'
 
@@ -31,5 +28,4 @@ jobs:
       - uses: wagoid/commitlint-github-action@v5
         with:
           configFile: 'commitlint.config.cjs'
-          firstParent: false
           failOnWarnings: false
