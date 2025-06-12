@@ -1,6 +1,6 @@
-## Contributing to Sparkles App
+## Contributing to Sparkles Editor
 
-Thank you for considering contributing to the Sparkles App! We appreciate your help in making this application better. Please follow the guidelines below to get started.
+Thank you for considering contributing to the Sparkles Editor! We appreciate your help in making this application better. Please follow the guidelines below to get started.
 
 ### How to Contribute
 
@@ -11,8 +11,8 @@ To contribute to this project, you'll need to create a personal copy of the repo
 Once you've forked the repository, clone it to your local machine:
 
 ```bash
-git clone https://github.com/SparklesIDE/Sparkles-app.git
-cd Sparkles-app
+git clone https://github.com/Sparkleseditor/Sparkleseditor.git
+cd Sparkleseditor
 ```
 
 #### 3. Create a New Branch (Optional)
@@ -53,8 +53,8 @@ Go to the original repository where you want to propose your changes. Click on t
 
 > [!NOTE]
 >  ### Additional Guidelines
-> - **License**: Please adhere to our [License](license).
+> - **License**: Please adhere to our [License](LICENSE).
 > - **Issue Tracking**: If you encounter a bug or have a feature request, please open an issue in the repository.
 > - **Review Process**: After submitting your pull request, a project maintainer will review your changes. Be open to feedback and ready to make any necessary revisions.
 
-Thank you for your contribution! Together, we can make the Sparkles App even better!
+Thank you for your contribution! Together, we can make the Sparkles Editor even better!
