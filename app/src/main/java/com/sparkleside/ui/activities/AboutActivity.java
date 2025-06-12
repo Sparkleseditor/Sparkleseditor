@@ -84,6 +84,15 @@ public class AboutActivity extends BaseActivity {
           openURL("https://www.telegram.me/sparkleseditor");
         });
 
+    binding.commits.setOnClickListener(
+            v -> {
+              Intent intent = new Intent(AboutActivity.this, CommitsActivity.class);
+              android.app.ActivityOptions optionsCompat =
+                      android.app.ActivityOptions.makeSceneTransitionAnimation(
+                              AboutActivity.this, binding.commits, "commits");
+              startActivity(intent, optionsCompat.toBundle());
+            });
+
     binding.github.setOnClickListener(
         v -> {
           openURL("https://github.com/sparkleddevs/sparkleseditor");

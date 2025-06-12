@@ -1,142 +1,179 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-  xmlns:app="http://schemas.android.com/apk/res-auto"
-  android:layout_height="match_parent"
-  android:layout_width="match_parent"
-  android:id="@+id/coordinator"
-  android:background="?colorSurface">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinator"
+    android:background="?colorSurface">
 
   <com.google.android.material.appbar.AppBarLayout
-    android:layout_height="wrap_content"
-    android:layout_width="match_parent"
-    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
-    android:fitsSystemWindows="true"
-    android:id="@+id/appbar">
+      android:layout_height="wrap_content"
+      android:layout_width="match_parent"
+      app:layout_behavior="com.google.android.material.appbar.AppBarLayout$Behavior"
+      android:fitsSystemWindows="true"
+      android:id="@+id/appbar">
 
     <com.google.android.material.appbar.MaterialToolbar
-      android:layout_height="?attr/actionBarSize"
-      android:layout_width="match_parent"
-      app:title="@string/com_word_about"
-      android:id="@+id/toolbar" />
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        app:title="@string/com_word_about"
+        android:id="@+id/toolbar" />
 
   </com.google.android.material.appbar.AppBarLayout>
 
   <androidx.core.widget.NestedScrollView
-    android:layout_height="match_parent"
-    android:layout_width="match_parent"
-    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-    android:id="@+id/nested_scroll_view">
-
-    <LinearLayout
       android:layout_height="match_parent"
       android:layout_width="match_parent"
-      android:padding="8dp"
-      android:orientation="vertical"
-      android:id="@+id/linear1">
+      app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+      android:id="@+id/nested_scroll_view">
 
-      <LinearLayout
-        android:layout_height="270dp"
+    <LinearLayout
+        android:layout_height="match_parent"
         android:layout_width="match_parent"
-        android:gravity="center_horizontal|center_vertical"
         android:padding="8dp"
         android:orientation="vertical"
-        android:id="@+id/linear2">
+        android:id="@+id/linear1">
+
+      <LinearLayout
+          android:layout_height="270dp"
+          android:layout_width="match_parent"
+          android:gravity="center_horizontal|center_vertical"
+          android:padding="8dp"
+          android:orientation="vertical"
+          android:id="@+id/linear2">
 
         <ImageView
-          android:layout_height="110dp"
-          android:layout_width="110dp"
-          android:src="@mipmap/ic_launcher"
-          android:scaleType="center"
-          android:id="@+id/imageview1" />
+            android:layout_height="110dp"
+            android:layout_width="110dp"
+            android:src="@mipmap/ic_launcher"
+            android:scaleType="center"
+            android:id="@+id/imageview1" />
 
         <TextView
-          android:layout_height="wrap_content"
-          android:layout_width="wrap_content"
-          android:padding="8dp"
-          android:textSize="25sp"
-          android:textColor="?colorOnSurface"
-          android:id="@+id/textview1"
-          android:text="@string/app_name"
-          android:textStyle="bold" />
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:padding="8dp"
+            android:textSize="25sp"
+            android:textColor="?colorOnSurface"
+            android:id="@+id/textview1"
+            android:text="@string/app_name"
+            android:textStyle="bold" />
 
         <LinearLayout
-          android:layout_height="wrap_content"
-          android:layout_width="match_parent"
-          android:padding="8dp"
-          android:orientation="horizontal"
-          android:layout_marginTop="20dp"
-          android:id="@+id/linear3">
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:padding="8dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:id="@+id/linear3">
 
           <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:id="@+id/linear7">
-
-            <LinearLayout
               android:layout_height="match_parent"
               android:layout_width="wrap_content"
               android:gravity="center_horizontal|center_vertical"
-              android:background="?selectableItemBackgroundBorderless"
               android:orientation="vertical"
-              android:id="@+id/github">
+              android:layout_weight="1"
+              android:id="@+id/linear7">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="?selectableItemBackgroundBorderless"
+                android:orientation="vertical"
+                android:id="@+id/github">
 
               <ImageView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/github"
-                android:scaleType="center"
-                android:layout_marginTop="8dp"
-                android:id="@+id/imageview2"
-                android:layout_gravity="center_horizontal|center_vertical" />
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:src="@drawable/github"
+                  android:scaleType="center"
+                  android:layout_marginTop="8dp"
+                  android:id="@+id/imageview2"
+                  android:layout_gravity="center_horizontal|center_vertical" />
 
               <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:textSize="12sp"
-                android:textColor="?colorOnSurface"
-                android:id="@+id/textview2"
-                android:text="Github" />
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:textSize="12sp"
+                  android:textColor="?colorOnSurface"
+                  android:id="@+id/textview2"
+                  android:text="Github" />
 
             </LinearLayout>
 
           </LinearLayout>
 
           <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_width="wrap_content"
-            android:gravity="center_horizontal|center_vertical"
-            android:orientation="vertical"
-            android:layout_weight="1"
-            android:id="@+id/tg">
-
-            <LinearLayout
               android:layout_height="match_parent"
               android:layout_width="wrap_content"
               android:gravity="center_horizontal|center_vertical"
-              android:background="?selectableItemBackgroundBorderless"
               android:orientation="vertical"
-              android:id="@+id/linear5">
+              android:layout_weight="1"
+              android:id="@+id/linear69">
+
+            <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal|center_vertical"
+                android:background="?selectableItemBackgroundBorderless"
+                android:orientation="vertical"
+                android:id="@+id/commits">
 
               <ImageView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:src="@drawable/telegram"
-                android:scaleType="center"
-                android:layout_marginTop="8dp"
-                android:id="@+id/imageview3" />
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:src="@drawable/github"
+                  android:scaleType="center"
+                  android:layout_marginTop="8dp"
+                  android:id="@+id/imageview69"
+                  android:layout_gravity="center_horizontal|center_vertical" />
 
               <TextView
-                android:layout_height="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:textSize="12sp"
+                  android:textColor="?colorOnSurface"
+                  android:id="@+id/textview69"
+                  android:text="Commits" />
+
+            </LinearLayout>
+          </LinearLayout>
+
+          <LinearLayout
+              android:layout_height="match_parent"
+              android:layout_width="wrap_content"
+              android:gravity="center_horizontal|center_vertical"
+              android:orientation="vertical"
+              android:layout_weight="1"
+              android:id="@+id/tg">
+
+            <LinearLayout
+                android:layout_height="match_parent"
                 android:layout_width="wrap_content"
-                android:textSize="12sp"
-                android:textColor="?colorOnSurface"
-                android:id="@+id/textview3"
-                android:text="Telegram" />
+                android:gravity="center_horizontal|center_vertical"
+                android:background="?selectableItemBackgroundBorderless"
+                android:orientation="vertical"
+                android:id="@+id/linear5">
+
+              <ImageView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:layout_marginBottom="8dp"
+                  android:src="@drawable/telegram"
+                  android:scaleType="center"
+                  android:layout_marginTop="8dp"
+                  android:id="@+id/imageview3" />
+
+              <TextView
+                  android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:textSize="12sp"
+                  android:textColor="?colorOnSurface"
+                  android:id="@+id/textview3"
+                  android:text="Telegram" />
 
             </LinearLayout>
 
@@ -147,111 +184,111 @@
       </LinearLayout>
 
       <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:gravity="center_horizontal|center_vertical"
-        android:background="?selectableItemBackgroundBorderless"
-        android:padding="8dp"
-        android:orientation="horizontal"
-        android:id="@+id/linear8">
-
-        <LinearLayout
-          android:layout_height="match_parent"
-          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
           android:gravity="center_horizontal|center_vertical"
           android:background="?selectableItemBackgroundBorderless"
           android:padding="8dp"
-          android:orientation="vertical"
-          android:layout_marginRight="18dp"
-          android:id="@+id/hanzo">
+          android:orientation="horizontal"
+          android:id="@+id/linear8">
 
-          <LinearLayout
-            android:layout_height="wrap_content"
+        <LinearLayout
+            android:layout_height="match_parent"
             android:layout_width="wrap_content"
             android:gravity="center_horizontal|center_vertical"
+            android:background="?selectableItemBackgroundBorderless"
             android:padding="8dp"
             android:orientation="vertical"
-            android:id="@+id/ln0">
+            android:layout_marginRight="18dp"
+            android:id="@+id/hanzo">
 
-            <com.google.android.material.imageview.ShapeableImageView
-              android:layout_height="60dp"
-              android:layout_width="60dp"
-              app:shapeAppearance="@style/Theme.Sparkles.CircleImageView"
-              android:id="@+id/img_neo" />
-
-            <TextView
+          <LinearLayout
               android:layout_height="wrap_content"
               android:layout_width="wrap_content"
+              android:gravity="center_horizontal|center_vertical"
               android:padding="8dp"
-              android:textSize="12sp"
-              android:textColor="?colorOnSurface"
-              android:id="@+id/textview4"
-              android:text="NEOAPPS" />
+              android:orientation="vertical"
+              android:id="@+id/ln0">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                app:shapeAppearance="@style/Theme.Sparkles.CircleImageView"
+                android:id="@+id/img_neo" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="8dp"
+                android:textSize="12sp"
+                android:textColor="?colorOnSurface"
+                android:id="@+id/textview4"
+                android:text="NEOAPPS" />
 
           </LinearLayout>
 
         </LinearLayout>
 
         <LinearLayout
-          android:layout_height="wrap_content"
-          android:layout_width="110dp"
-          android:gravity="center_horizontal|center_vertical"
-          android:background="?selectableItemBackgroundBorderless"
-          android:padding="8dp"
-          android:orientation="vertical"
-          android:id="@+id/syn">
-
-          <com.google.android.material.imageview.ShapeableImageView
-            android:layout_height="80dp"
-            android:layout_width="80dp"
-            app:shapeAppearance="@style/Theme.Sparkles.CircleImageView"
-            android:id="@+id/img_syn" />
-
-          <TextView
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:padding="8dp"
-            android:textSize="14sp"
-            android:textColor="?colorOnSurface"
-            android:id="@+id/textview5"
-            android:text="SyntaxSpin"
-            android:singleLine="true" />
-
-        </LinearLayout>
-
-        <LinearLayout
-          android:layout_height="match_parent"
-          android:layout_width="wrap_content"
-          android:gravity="center_horizontal|center_vertical"
-          android:background="?selectableItemBackgroundBorderless"
-          android:padding="8dp"
-          android:orientation="vertical"
-          android:layout_marginLeft="18dp"
-          android:id="@+id/trindade">
-
-          <LinearLayout
-            android:layout_height="wrap_content"
-            android:layout_width="80dp"
+            android:layout_width="110dp"
             android:gravity="center_horizontal|center_vertical"
             android:background="?selectableItemBackgroundBorderless"
             android:padding="8dp"
             android:orientation="vertical"
-            android:id="@+id/ln1">
+            android:id="@+id/syn">
 
-            <com.google.android.material.imageview.ShapeableImageView
-              android:layout_height="60dp"
-              android:layout_width="60dp"
+          <com.google.android.material.imageview.ShapeableImageView
+              android:layout_height="80dp"
+              android:layout_width="80dp"
               app:shapeAppearance="@style/Theme.Sparkles.CircleImageView"
-              android:id="@+id/img_trindade" />
+              android:id="@+id/img_syn" />
 
-            <TextView
+          <TextView
               android:layout_height="wrap_content"
               android:layout_width="wrap_content"
               android:padding="8dp"
-              android:textSize="12sp"
-              android:id="@+id/textview6"
-              android:text="Aquiles"
-              android:textColor="?colorOnSurface" />
+              android:textSize="14sp"
+              android:textColor="?colorOnSurface"
+              android:id="@+id/textview5"
+              android:text="SyntaxSpin"
+              android:singleLine="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:background="?selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="18dp"
+            android:id="@+id/trindade">
+
+          <LinearLayout
+              android:layout_height="wrap_content"
+              android:layout_width="80dp"
+              android:gravity="center_horizontal|center_vertical"
+              android:background="?selectableItemBackgroundBorderless"
+              android:padding="8dp"
+              android:orientation="vertical"
+              android:id="@+id/ln1">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_height="60dp"
+                android:layout_width="60dp"
+                app:shapeAppearance="@style/Theme.Sparkles.CircleImageView"
+                android:id="@+id/img_trindade" />
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:padding="8dp"
+                android:textSize="12sp"
+                android:id="@+id/textview6"
+                android:text="Aquiles"
+                android:textColor="?colorOnSurface" />
 
           </LinearLayout>
 
@@ -260,31 +297,31 @@
       </LinearLayout>
 
       <TextView
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="2dp"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:paddingBottom="0dp"
-        android:fontFamily="@font/nunitob"
-        android:textColor="?colorPrimary"
-        android:text="@string/about_team" />
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:layout_marginTop="15dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="2dp"
+          android:textSize="30sp"
+          android:textStyle="bold"
+          android:gravity="center"
+          android:paddingBottom="0dp"
+          android:fontFamily="@font/nunitob"
+          android:textColor="?colorPrimary"
+          android:text="@string/about_team" />
       <LinearLayout
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:gravity="center"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp"
-        android:layout_marginBottom="15dp"
-        android:background="@drawable/ic_wavy_line"/>
+          android:layout_height="wrap_content"
+          android:layout_width="wrap_content"
+          android:gravity="center"
+          android:layout_gravity="center"
+          android:layout_marginTop="0dp"
+          android:layout_marginLeft="15dp"
+          android:layout_marginRight="15dp"
+          android:layout_marginBottom="15dp"
+          android:background="@drawable/ic_wavy_line"/>
 
-        <LinearLayout
+      <LinearLayout
           android:layout_height="match_parent"
           android:layout_width="match_parent"
           android:orientation="vertical"
@@ -292,7 +329,7 @@
           android:layout_marginLeft="8dp"
           android:id="@+id/team">
 
-        </LinearLayout>
+      </LinearLayout>
 
 
     </LinearLayout>

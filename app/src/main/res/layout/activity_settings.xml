@@ -57,7 +57,7 @@
           android:src="@drawable/android_24px"
           android:layout_centerVertical="true"
           android:layout_marginRight="64px"
-          android:tint="?colorPrimary"
+          app:tint="?colorPrimary"
           android:id="@+id/preference_icon" />
 
         <TextView
@@ -96,7 +96,7 @@
           android:src="@drawable/edit_24px"
           android:layout_centerVertical="true"
           android:layout_marginRight="64px"
-          android:tint="?colorPrimary"
+          app:tint="?colorPrimary"
           android:id="@+id/preference_icon2" />
 
         <TextView
@@ -136,7 +136,7 @@
           android:src="@drawable/terminal_24px"
           android:layout_centerVertical="true"
           android:layout_marginRight="64px"
-          android:tint="?colorPrimary"
+          app:tint="?colorPrimary"
           android:id="@+id/preference_icon3" />
 
         <TextView
@@ -175,7 +175,7 @@
           android:src="@drawable/book_24px"
           android:layout_centerVertical="true"
           android:layout_marginRight="64px"
-          android:tint="?colorPrimary"
+          app:tint="?colorPrimary"
           android:id="@+id/preference_icon4" />
 
         <TextView
@@ -214,7 +214,7 @@
           android:src="@drawable/info_24px"
           android:layout_centerVertical="true"
           android:layout_marginRight="64px"
-          android:tint="?colorPrimary"
+          app:tint="?colorPrimary"
           android:id="@+id/preference_icon5" />
 
         <TextView
