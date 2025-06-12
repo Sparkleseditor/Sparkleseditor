@@ -2,10 +2,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
-<<<<<<< HEAD
-=======
     "commitlint": "^19.8.1",
->>>>>>> 836de10 (test: commitlint)
     "husky": "^9.1.7"
   },
   "scripts": {
