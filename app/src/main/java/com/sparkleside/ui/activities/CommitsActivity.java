@@ -82,13 +82,13 @@ public class CommitsActivity extends BaseActivity {
                     JSONObject commitData = commit.getJSONObject("commit");
                     JSONObject author = commit.getJSONObject("author");
                     String message = commitData.getString("message");
-                    String sha = commit.getString("sha");
+                  //  String sha = commit.getString("sha");
                     String htmlUrl = commit.getString("html_url");
                     String authorName = author.has("login") ? author.getString("login") : commitData.getJSONObject("author").getString("name");
                     String date = commitData.getJSONObject("author").getString("date");
                     String avatarUrl = "https://github.com/" + authorName + ".png";
                     String githubUrl = "https://github.com/" + authorName;
-                    commitList.add(new CommitItem(message, sha, htmlUrl, authorName,
+                    commitList.add(new CommitItem(message, htmlUrl, authorName,
                             avatarUrl, githubUrl, date));
                 }
 
@@ -100,12 +100,11 @@ public class CommitsActivity extends BaseActivity {
     }
 
     static class CommitItem {
-        final String message, sha, htmlUrl, authorName, avatarUrl, githubUrl, date;
+        final String message, htmlUrl, authorName, avatarUrl, githubUrl, date;
 
-        CommitItem(String message, String sha, String htmlUrl, String authorName,
+        CommitItem(String message, String htmlUrl, String authorName,
                    String avatarUrl, String githubUrl, String date) {
             this.message = message;
-            this.sha = sha;
             this.htmlUrl = htmlUrl;
             this.authorName = authorName;
             this.avatarUrl = avatarUrl;
@@ -128,9 +127,9 @@ public class CommitsActivity extends BaseActivity {
             CommitItem item = commitList.get(position);
             holder.messageText.setText(item.message);
             holder.authorText.setText(item.authorName);
-            holder.shaText.setText(item.sha.substring(0, 7));
+            //holder.shaText.setText(item.sha.substring(0, 7));
             if (position == 0) { holder.commitCard.setBackgroundResource(R.drawable.shape_top); }
-            if (position == 29) { holder.commitCard.setBackgroundResource(R.drawable.shape_bottom); }
+            if (position == commitList.size() -1 ) { holder.commitCard.setBackgroundResource(R.drawable.shape_bottom); }
             try {
                 SimpleDateFormat input = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.US);
                 SimpleDateFormat output = new SimpleDateFormat("MMM dd, HH:mm", Locale.US);
@@ -171,7 +170,7 @@ public class CommitsActivity extends BaseActivity {
         class CommitViewHolder extends RecyclerView.ViewHolder {
             final LinearLayout commitCard;
             final ImageView avatarImage;
-            final TextView messageText, authorText, dateText, shaText;
+            final TextView messageText, authorText, dateText;
             CommitViewHolder(@NonNull View itemView) {
                 super(itemView);
                 commitCard = itemView.findViewById(R.id.commit_card);
@@ -179,7 +178,6 @@ public class CommitsActivity extends BaseActivity {
                 messageText = itemView.findViewById(R.id.message_text);
                 authorText = itemView.findViewById(R.id.author_text);
                 dateText = itemView.findViewById(R.id.date_text);
-                shaText = itemView.findViewById(R.id.sha_text);
             }
         }
     }

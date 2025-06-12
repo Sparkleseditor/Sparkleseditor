@@ -3,7 +3,7 @@
 
   <!--Base String-->
   
-  <string name="app_name">Sparkles IDE</string>
+  <string name="app_name">Sparkles Editor</string>
   <string name="com_word_settings">Settings</string>
   <string name="set_main">Application Settings</string>
   <string name="set_main_desc">Some of Sparkles Apperance settings</string>
