@@ -15,13 +15,13 @@
     </style>
 
     <style name="TextAppearance.Sparkles.CollapsingToolbar.Collapsed" parent="TextAppearance.Material3.TitleLarge">
-        <item name="fontFamily">@font/geistregular</item>
-        <item name="android:fontFamily">@font/geistregular</item>
+        <item name="fontFamily">@font/generalsansr</item>
+        <item name="android:fontFamily">@font/generalsansr</item>
     </style>
 
     <style name="TextAppearance.Sparkles.CollapsingToolbar.Expanded" parent="TextAppearance.Material3.HeadlineMedium">
-        <item name="fontFamily">@font/geistbold</item>
-        <item name="android:fontFamily">@font/geistbold</item>
+        <item name="fontFamily">@font/generalsansb</item>
+        <item name="android:fontFamily">@font/generalsansb</item>
     </style>
     
     <!--this code was imported from Rikka Apps' shizuku-->
