@@ -4,7 +4,28 @@ on:
   push:
     branches:
       - main
-      - workflow
+      - workflowname: Commitlint
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  commitlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Install Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Lint commits
+        uses: wagoid/commitlint-github-action@v5
+
   pull_request:
     branches:
       - main
