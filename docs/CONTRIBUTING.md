@@ -53,7 +53,7 @@ Go to the original repository where you want to propose your changes. Click on t
 
 > [!NOTE]
 >  ### Additional Guidelines
-> - **License**: Please adhere to our [License](license).
+> - **License**: Please adhere to our [License](../license).
 > - **Issue Tracking**: If you encounter a bug or have a feature request, please open an issue in the repository.
 > - **Review Process**: After submitting your pull request, a project maintainer will review your changes. Be open to feedback and ready to make any necessary revisions.
 
