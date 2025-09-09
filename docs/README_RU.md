@@ -3,7 +3,7 @@
 ---
 
 <div align="center">
-  <img src="bannersparkle.png" style="width: 45rem; height: auto;"/>
+  <img src="../bannersparkle.png" style="width: 45rem; height: auto;"/>
   <p>Sparkles является редактором Всё-В-Одном,
 поддерживающее различные языки программирования и Material Design 3</p>
   <br>
