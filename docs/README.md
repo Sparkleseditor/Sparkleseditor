@@ -10,9 +10,9 @@ with Supporting full languages & Material Design 3</p>
 
   <img src="https://m3-markdown-badges.vercel.app/stars/5/2/sparkleside/sparkles-app">
  <img src="https://m3-markdown-badges.vercel.app/issues/5/1/sparkleside/sparkles-app">
- <a herf="https://discord.gg/AYH4h7jTv8"><img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Discord/discord2.svg">
+ <a href="https://discord.gg/AYH4h7jTv8"><img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Discord/discord2.svg">
  </a>
- <a herf="https://t.me/sparkleseditor">
+ <a href="https://t.me/sparkleseditor">
 <img src="https://ziadoua.github.io/m3-Markdown-Badges/badges/Telegram/telegram2.svg">
  </a>
 </div>
