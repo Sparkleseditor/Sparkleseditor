@@ -18,8 +18,8 @@
   <string name="com_word_about">О нас</string>
   <string name="set_about_desc">О Sparkles</string>
   <string name="about_team">Команда</string>
-  <string name="about_tag_translator">Переводчики</string>
-  <string name="about_tag_developer">Разработчики</string>
+  <string name="about_tag_translator">Переводчик</string>
+  <string name="about_tag_developer">Разработчик</string>
   <string name="about_tag_promote">Промоутер</string>
   <string name="about_tag_designer">Дизайнер</string>
   <string name="tooltip_settings">Настройки</string>
