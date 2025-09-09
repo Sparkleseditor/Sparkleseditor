@@ -3,7 +3,7 @@
 ---
 
 <div align="center">
-  <img src="bannersparkle.png" style="width: 45rem; height: auto;"/>
+  <img src="../bannersparkle.png" style="width: 45rem; height: auto;"/>
   <p>Sparkles Editor is an All-in-one Editor
 with Supporting full languages & Material Design 3</p>
   <br>
