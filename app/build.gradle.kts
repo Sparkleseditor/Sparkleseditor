@@ -17,7 +17,7 @@ android {
     versionName = "1.0"
 
     vectorDrawables.useSupportLibrary = true
-    resConfigs("bn-rBD", "de","ar-rTN", "es-rES", "fr-rTN", "in-rID", "pt-rBR", "pt-rPT", "zh-rCN")
+    resConfigs("bn-rBD", "de","ar-rTN", "es-rES", "fr-rTN", "in-rID", "pt-rBR", "pt-rPT", "ru-rRU", "zh-rCN")
   }
 
   compileOptions {
