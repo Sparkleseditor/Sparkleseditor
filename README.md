@@ -1,3 +1,6 @@
+**English** | [Русский](README_RU.md)
+
+---
 
 <div align="center">
   <img src="bannersparkle.png" style="width: 45rem; height: auto;"/>
