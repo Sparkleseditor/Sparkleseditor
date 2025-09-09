@@ -205,6 +205,13 @@ public class AboutActivity extends BaseActivity {
         1,
         false);    
     TeamMember(
+        "BatoBatoB",
+        Role.TRANSLATOR,
+        "https://github.com/BatoBatoB",
+        getString(R.string.bato_phrase),
+        1,
+        false);        
+    TeamMember(
         "Fahim Abdullah",
         Role.TRANSLATOR,
         "https://github.com/nexavo999",

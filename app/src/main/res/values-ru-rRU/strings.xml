@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <!--Base String-->
+  
+  <string name="app_name">Sparkles Редактор</string>
+  <string name="com_word_settings">Настройки</string>
+  <string name="set_main">Настройки приложения</string>
+  <string name="set_main_desc">Настройки внешнего вида Sparkles</string>
+  <string name="common_word_allow">Разрешить</string>
+  <string name="common_word_deny">Отказать</string>
+  <string name="set_editor">Редактор кода</string>
+  <string name="set_editor_desc">Изменить стиль редактора</string>
+  <string name="set_terminal">Терминал</string>
+  <string name="set_terminal_desc">Изменить стиль терминала</string>
+  <string name="set_lib">Программное обеспечение сторонних производителей</string>
+  <string name="set_lib_desc">Библиотеки и стороннее обеспечение, используемое в Sparkles</string>
+  <string name="com_word_about">О нас</string>
+  <string name="set_about_desc">О Sparkles</string>
+  <string name="about_team">Команда</string>
+  <string name="about_tag_translator">Переводчики</string>
+  <string name="about_tag_developer">Разработчики</string>
+  <string name="about_tag_promote">Промоутер</string>
+  <string name="about_tag_designer">Дизайнер</string>
+  <string name="tooltip_settings">Настройки</string>
+  <string name="tooltip_terminal">Открыть терминал</string>
+  <string name="tooltip_new_file">Новый файл</string>
+  <string name="tooltip_search">Найти в коде</string>
+  <string name="permission_dialog_text">Для правильной работы Sparkles необходимо выдать разрешения на доступ к файлам</string>
+  <string name="Grant">Выдать</string>
+  <string name="Deny">Отказать</string>
+  
+   <!--Appearance Settings-->
+  
+  <string name="monet_title">Использовать динамические цвета</string>
+  <string name="monet_desc">Использовать цветовую палитру Monet</string>
+  <string name="amoled_title">Тёмная тема</string>
+  <string name="amoled_desc">Тёмная тема AMOLED</string>
+  <string name="need_restart">Необходимо перезапустить приложение</string>
+
+   <!--new settings Strings-->
+  
+  <string name="apper_uimode">Настроить режим интерфейса:</string>
+  
+  <!--Code editor settings , avoid using long sentences-->
+  
+  <string name="editor_theme">Тема редактора</string>
+  <string name="editor_theme_desc">Выбрать тему редактора Sora</string>
+  <string name="editor_wordwrap">Перенос слов</string>
+  <string name="editor_wordwrap_desc">Включает перенос слов из Sora</string>
+  <string name="editor_fl">Показывать номер первой строки</string>
+  <string name="editor_fl_desc">Показывает или скрывает номер первой строки</string>
+  <string name="editor_overscroll">Чрезмерная прокрутка</string>
+  <string name="editor_overscroll_desc">Включить чрезмерную прокрутку из Sora</string>
+  <string name="editor_ln">Показывать номер строки</string>
+  <string name="editor_ln_desc">Показывает или скрывает номер строки</string>
+  <string name="editor_toolbar">Показывать панель инструментов</string>
+  <string name="editor_toolbar_desc">Показывает или скрывает панель инструментов</string>
+  <string name="editor_tab">Вкладки (В текущий момент недоступно)</string>
+  <string name="editor_tab_desc">Использовать режим вкладок в Sparkles</string>
+  <string name="editor_title">Форматирование</string>
+  <string name="editor_theme_title">Тема редактора Sora</string>
+  <string name="restart_app_message">Для применения изменений необходимо перезапустить приложение</string>
+  <string name="save">Сохранить</string>
+  <string name="save_as">Сохранить как</string>
+  <string name="close">Закрыть</string>
+  <string name="close_others">Закрыть другие</string>
+  <string name="close_all">Закрыть все</string>
+
+</resources>
