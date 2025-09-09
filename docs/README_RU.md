@@ -1,4 +1,4 @@
-
+[English](README.md) | **Русский**
 <div align="center">
   <img src="bannersparkle.png" style="width: 45rem; height: auto;"/>
   <p>Sparkles является редактором Всё-В-Одном,
@@ -14,7 +14,7 @@
  </a>
 </div>
 
-## Особенности иamp; список задач
+## Особенности и список задач
 - [ ] Хорошая кастомизация редактора кода
 - [ ] Поддержка Python
 - [x] Поддержка Java
@@ -31,7 +31,7 @@
 [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Участники
-hrefhref="https://github.com/SparklesIDE/Sparkles-App/graphs/contributors">
+<a href="https://github.com/SparklesIDE/Sparkles-App/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=SparklesIDE/Sparkles-App" />
 </a>
 
