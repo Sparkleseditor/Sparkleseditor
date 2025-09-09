@@ -31,7 +31,7 @@
 ## Как внести свой вклад
 <p>Если вы хотите помочь нам в разработке, то убедитесь, что вы уважаете правила, создав отдельную ветку</p>
 
-[CONTRIBUTING.md](CONTRIBUTING.md).
+[CONTRIBUTING.md](CONTRIBUTING_RU.md).
 
 ## Участники
 <a href="https://github.com/SparklesIDE/Sparkles-App/graphs/contributors">
