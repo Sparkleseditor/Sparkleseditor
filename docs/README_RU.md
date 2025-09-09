@@ -1,4 +1,7 @@
 [English](README.md) | **Русский**
+
+---
+
 <div align="center">
   <img src="bannersparkle.png" style="width: 45rem; height: auto;"/>
   <p>Sparkles является редактором Всё-В-Одном,
