@@ -74,6 +74,7 @@ dependencies {
   implementation("io.github.Rosemoe.sora-editor:editor:0.23.4")
   implementation("com.github.bumptech.glide:glide:4.16.0")
   implementation("androidx.activity:activity:1.6.0-alpha05")
+  implementation("androidx.transition:transition:1.6.0")
 
   implementation("com.blankj:utilcodex:1.31.1")
   implementation("nl.dionsegijn:konfetti-xml:2.0.4")
